@@ -14,9 +14,12 @@ export class AppComponent implements OnInit{
    
   }
 
+  
+
   imageUrl:string=""
   getPhotoRandom(){
-    this.apiCall.getPhoto().subscribe((response:any)=>{
+    this.apiCall.getPhoto().subscribe((response)=>{
+      console.log(response)
       console.log(response.urls.regular)
       this.imageUrl=response.urls.regular;
     })
